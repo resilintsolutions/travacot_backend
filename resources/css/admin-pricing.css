@@ -1,0 +1,26 @@
+/* resources/css/admin-pricing.css - small style to match screenshots */
+.mr-card {
+  border-radius: 12px;
+  border: 1px solid #e6e9ef;
+  background: #fff;
+}
+.mr-top-card {
+  border-radius: 12px;
+  border: 1px solid #e6e9ef;
+  background: #f7f9fc;
+  padding: 18px;
+}
+.mr-badge {
+  background: #f5f7fa;
+  color: #111;
+  display:inline-block;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-weight:600;
+}
+.mr-list-item { padding: 18px 24px; border-bottom:1px solid #f1f3f6; }
+.mr-list-item .fw-semibold { font-weight:700; }
+.mr-section { margin-bottom: 22px; }
+.modal .form-text { color:#6b7280; }
+.btn-outline-primary { border-color:#e6e9ef; color:#222; }
+.card-body .small.text-muted { color:#6b7280; }

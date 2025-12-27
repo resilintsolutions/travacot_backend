@@ -1,0 +1,1441 @@
+{
+    "success": true,
+    "hotel": {
+        "id": 766,
+        "name": "Elba Sunset Mallorca Thalasso Spa",
+        "description": "This beautiful, modern hotel is located in Palmanova, minutes from the tourist area. Nestled between the sea and sky, the property offers its guests maximum service and comfort, for an unforgettable vacation. The establishment is within 3 km of Katmandu Park, Palma Nova Beach, and Western Water Park. The nearest airport is Palma de Mallorca Airport, 27 km from the hotel. The property features an on-site restaurant, which offers a delicious variety of international dishes. Guests can enjoy a refreshing dip at the outdoor swimming pool. Other amenities include a full-service spa, 2 bars/lounges and a fitness centre. All rooms are comfortable and modern, elegantly decorated and offer convenient amenities to make your stay a pleasant one. They feature thoughtful touches like espresso makers and bathrobes. Additional amenities include free Wi-Fi, air conditioning, satellite TV and a private bathroom. \n\n**The hotel does not allow or accept bachelor/bachelorette parties or similar group celebrations, and reserves the right of admission. **",
+        "address": "Torrenova, 25-27",
+        "categoryCode": "4EST",
+        "categoryName": "4 STARS",
+        "destinationCode": "PMI",
+        "destinationName": "Majorca",
+        "zoneCode": 29,
+        "zoneName": "Palmanova",
+        "latitude": 39.509823,
+        "longitude": 2.544901,
+        "minRate": "574.99",
+        "maxRate": "1203.98",
+        "currency": "EUR",
+        "images": [
+            "https://photos.hotelbeds.com/giata/00/000766/000766a_hb_ro_231.jpg",
+            "https://photos.hotelbeds.com/giata/00/000766/000766a_hb_ro_311.jpg",
+            "https://photos.hotelbeds.com/giata/00/000766/000766a_hb_ro_234.jpg",
+            "https://photos.hotelbeds.com/giata/00/000766/000766a_hb_a_033.JPG",
+            "https://photos.hotelbeds.com/giata/00/000766/000766a_hb_ro_194.jpg"
+        ],
+        "houseRules": {
+            "checkIn": {
+                "from": "15:00:00",
+                "to": "00:00:00",
+                "description": [
+                    "Check-in hour",
+                    "Identification card at arrival"
+                ]
+            },
+            "checkOut": {
+                "from": "12:00:00",
+                "to": "12:00:00",
+                "description": [
+                    "Check-out hour",
+                    "Late Check-out",
+                    "Early departure"
+                ]
+            },
+            "cancellationPrepayment": "Cancellation and Prepayment policies vary according to accommodation type.Check the packages to see whatever you chose has a cancellation/prepayment policy or not.",
+            "childrenAndBeds": {
+                "summary": "Children above 18 will be charged as adults. To avoid problems and confusion, make sure your child is in the right category when searching for a stay.",
+                "beds": [
+                    "Extra beds on demand"
+                ],
+                "note": "Cots/Extra Bed are NOT included in the total price and must be paid separately during your stay."
+            },
+            "ageRestrictions": "No age restrictions provided.",
+            "pets": "Not provided",
+            "paymentMethods": [
+                "AMERICAN EXPRESS",
+                "MASTERCARD",
+                "VISA",
+                "MAESTRO"
+            ]
+        }
+    },
+    "rooms": [
+        {
+            "code": "DBL.ST",
+            "name": "Double Standard Rodas",
+            "roomSizeSqm": 20,
+            "bedType": "Double bed 131-150 width",
+            "roomFit": "2 adults",
+            "remainingRooms": 3,
+            "images": [
+                "https://photos.hotelbeds.com/giata/00/000766/000766a_hb_ro_211.jpg",
+                "https://photos.hotelbeds.com/giata/00/000766/000766a_hb_ro_210.jpg",
+                "https://photos.hotelbeds.com/giata/00/000766/000766a_hb_ro_209.jpg",
+                "https://photos.hotelbeds.com/giata/00/000766/000766a_hb_ro_208.jpg",
+                "https://photos.hotelbeds.com/giata/00/000766/000766a_hb_ro_207.jpg"
+            ],
+            "totalPrice": 574.99,
+            "pricePerNight": 115,
+            "nights": 5,
+            "currency": "EUR",
+            "rateKey": "20251225|20251230|W|1|766|DBL.ST|CG-PACKAGE BB|BB||1~2~0||P@07~~26323e~149923235~N~~~NOR~~C62FE86F5DB0470176514794519005AAUK0001000000000526323e",
+            "board": "BED AND BREAKFAST",
+            "refundable": true,
+            "cancellation": [
+                {
+                    "amount": "118.15",
+                    "from": "2025-12-20T23:59:00+01:00"
+                },
+                {
+                    "amount": "574.99",
+                    "from": "2025-12-23T23:59:00+01:00"
+                }
+            ],
+            "taxes": [
+                {
+                    "included": false,
+                    "amount": "8.25",
+                    "currency": "EUR",
+                    "type": "TAX",
+                    "clientAmount": "8.25",
+                    "clientCurrency": "EUR",
+                    "subType": "City Tax"
+                }
+            ],
+            "taxesTotal": 8.25,
+            "hb_raw": {
+                "code": "DBL.ST",
+                "name": "Double Standard Rodas",
+                "rates": [
+                    {
+                        "rateKey": "20251225|20251230|W|1|766|DBL.ST|CG-PACKAGE BB|BB||1~2~0||P@07~~26323e~149923235~N~~~NOR~~C62FE86F5DB0470176514794519005AAUK0001000000000526323e",
+                        "rateClass": "NOR",
+                        "rateType": "BOOKABLE",
+                        "net": "574.99",
+                        "allotment": 3,
+                        "rateCommentsId": "1|106372|0",
+                        "paymentType": "AT_WEB",
+                        "packaging": true,
+                        "boardCode": "BB",
+                        "boardName": "BED AND BREAKFAST",
+                        "cancellationPolicies": [
+                            {
+                                "amount": "118.15",
+                                "from": "2025-12-20T23:59:00+01:00"
+                            },
+                            {
+                                "amount": "574.99",
+                                "from": "2025-12-23T23:59:00+01:00"
+                            }
+                        ],
+                        "taxes": {
+                            "taxes": [
+                                {
+                                    "included": false,
+                                    "amount": "8.25",
+                                    "currency": "EUR",
+                                    "type": "TAX",
+                                    "clientAmount": "8.25",
+                                    "clientCurrency": "EUR",
+                                    "subType": "City Tax"
+                                }
+                            ],
+                            "allIncluded": false
+                        },
+                        "rooms": 1,
+                        "adults": 2,
+                        "children": 0
+                    },
+                    {
+                        "rateKey": "20251225|20251230|W|1|766|DBL.ST|CG-BAR BB PVP|BB||1~2~0||N@07~~2002da~-160906989~N~~~NOR~~C62FE86F5DB0470176514794519005AAUK0001000000000522324a",
+                        "rateClass": "NOR",
+                        "rateType": "BOOKABLE",
+                        "net": "586.35",
+                        "allotment": 3,
+                        "rateCommentsId": "1|106232|0",
+                        "paymentType": "AT_WEB",
+                        "packaging": false,
+                        "boardCode": "BB",
+                        "boardName": "BED AND BREAKFAST",
+                        "cancellationPolicies": [
+                            {
+                                "amount": "120.48",
+                                "from": "2025-12-20T23:59:00+01:00"
+                            },
+                            {
+                                "amount": "586.35",
+                                "from": "2025-12-23T23:59:00+01:00"
+                            }
+                        ],
+                        "taxes": {
+                            "taxes": [
+                                {
+                                    "included": false,
+                                    "amount": "8.25",
+                                    "currency": "EUR",
+                                    "type": "TAX",
+                                    "clientAmount": "8.25",
+                                    "clientCurrency": "EUR",
+                                    "subType": "City Tax"
+                                }
+                            ],
+                            "allIncluded": false
+                        },
+                        "rooms": 1,
+                        "adults": 2,
+                        "children": 0
+                    },
+                    {
+                        "rateKey": "20251225|20251230|W|1|766|DBL.ST|NRF-BAR BB|BB||1~2~0||N@07~~2002da~1794792812~N~~~NRF~~C62FE86F5DB0470176514794519005AAUK0001000000000522324a",
+                        "rateClass": "NRF",
+                        "rateType": "BOOKABLE",
+                        "net": "586.35",
+                        "allotment": 3,
+                        "rateCommentsId": "1|106366|0",
+                        "paymentType": "AT_WEB",
+                        "packaging": false,
+                        "boardCode": "BB",
+                        "boardName": "BED AND BREAKFAST",
+                        "cancellationPolicies": [
+                            {
+                                "amount": "586.35",
+                                "from": "2025-12-06T23:59:00+01:00"
+                            }
+                        ],
+                        "taxes": {
+                            "taxes": [
+                                {
+                                    "included": false,
+                                    "amount": "8.25",
+                                    "currency": "EUR",
+                                    "type": "TAX",
+                                    "clientAmount": "8.25",
+                                    "clientCurrency": "EUR",
+                                    "subType": "City Tax"
+                                }
+                            ],
+                            "allIncluded": false
+                        },
+                        "rooms": 1,
+                        "adults": 2,
+                        "children": 0
+                    },
+                    {
+                        "rateKey": "20251225|20251230|W|1|766|DBL.ST|CG-PACKAGE HB|HB||1~2~0||P@07~~2133bc~-149309~N~~~NOR~~C62FE86F5DB0470176514794519005AAUK000100000000052133bc",
+                        "rateClass": "NOR",
+                        "rateType": "BOOKABLE",
+                        "net": "956.19",
+                        "allotment": 3,
+                        "rateCommentsId": "1|106373|0",
+                        "paymentType": "AT_WEB",
+                        "packaging": true,
+                        "boardCode": "HB",
+                        "boardName": "HALF BOARD",
+                        "cancellationPolicies": [
+                            {
+                                "amount": "256.77",
+                                "from": "2025-12-20T23:59:00+01:00"
+                            },
+                            {
+                                "amount": "956.19",
+                                "from": "2025-12-23T23:59:00+01:00"
+                            }
+                        ],
+                        "taxes": {
+                            "taxes": [
+                                {
+                                    "included": false,
+                                    "amount": "8.25",
+                                    "currency": "EUR",
+                                    "type": "TAX",
+                                    "clientAmount": "8.25",
+                                    "clientCurrency": "EUR",
+                                    "subType": "City Tax"
+                                }
+                            ],
+                            "allIncluded": false
+                        },
+                        "rooms": 1,
+                        "adults": 2,
+                        "children": 0
+                    },
+                    {
+                        "rateKey": "20251225|20251230|W|1|766|DBL.ST|CG-BAR HB|HB||1~2~0||N@07~~2004be~-1763775099~N~~~NOR~~C62FE86F5DB0470176514794519005AAUK000100000000052083cf",
+                        "rateClass": "NOR",
+                        "rateType": "BOOKABLE",
+                        "net": "975.08",
+                        "allotment": 3,
+                        "rateCommentsId": "1|106368|0",
+                        "paymentType": "AT_WEB",
+                        "packaging": false,
+                        "boardCode": "HB",
+                        "boardName": "HALF BOARD",
+                        "cancellationPolicies": [
+                            {
+                                "amount": "261.84",
+                                "from": "2025-12-20T23:59:00+01:00"
+                            },
+                            {
+                                "amount": "975.08",
+                                "from": "2025-12-23T23:59:00+01:00"
+                            }
+                        ],
+                        "taxes": {
+                            "taxes": [
+                                {
+                                    "included": false,
+                                    "amount": "8.25",
+                                    "currency": "EUR",
+                                    "type": "TAX",
+                                    "clientAmount": "8.25",
+                                    "clientCurrency": "EUR",
+                                    "subType": "City Tax"
+                                }
+                            ],
+                            "allIncluded": false
+                        },
+                        "rooms": 1,
+                        "adults": 2,
+                        "children": 0
+                    },
+                    {
+                        "rateKey": "20251225|20251230|W|1|766|DBL.ST|NRF-BAR HB|HB||1~2~0||N@07~~2004be~-2011603660~N~~~NRF~~C62FE86F5DB0470176514794519005AAUK000100000000052083cf",
+                        "rateClass": "NRF",
+                        "rateType": "BOOKABLE",
+                        "net": "975.08",
+                        "allotment": 3,
+                        "rateCommentsId": "1|106370|0",
+                        "paymentType": "AT_WEB",
+                        "packaging": false,
+                        "boardCode": "HB",
+                        "boardName": "HALF BOARD",
+                        "cancellationPolicies": [
+                            {
+                                "amount": "975.08",
+                                "from": "2025-12-06T23:59:00+01:00"
+                            }
+                        ],
+                        "taxes": {
+                            "taxes": [
+                                {
+                                    "included": false,
+                                    "amount": "8.25",
+                                    "currency": "EUR",
+                                    "type": "TAX",
+                                    "clientAmount": "8.25",
+                                    "clientCurrency": "EUR",
+                                    "subType": "City Tax"
+                                }
+                            ],
+                            "allIncluded": false
+                        },
+                        "rooms": 1,
+                        "adults": 2,
+                        "children": 0
+                    }
+                ]
+            }
+        },
+        {
+            "code": "DBL.OM",
+            "name": "Double Comfort Lemnos with balcony",
+            "roomSizeSqm": 25,
+            "bedType": "Double bed 131-150 width",
+            "roomFit": "2 adults",
+            "remainingRooms": 12,
+            "images": [
+                "https://photos.hotelbeds.com/giata/00/000766/000766a_hb_ro_119.jpg",
+                "https://photos.hotelbeds.com/giata/00/000766/000766a_hb_ro_115.jpg",
+                "https://photos.hotelbeds.com/giata/00/000766/000766a_hb_ro_117.jpg",
+                "https://photos.hotelbeds.com/giata/00/000766/000766a_hb_ro_116.jpg"
+            ],
+            "totalPrice": 631.22,
+            "pricePerNight": 126.24,
+            "nights": 5,
+            "currency": "EUR",
+            "rateKey": "20251225|20251230|W|1|766|DBL.OM|CG-PACKAGE BB|BB||1~2~0||P@07~~216277~-356124602~N~~~NOR~~C62FE86F5DB0470176514794519005AAUK00010000000005216277",
+            "board": "BED AND BREAKFAST",
+            "refundable": true,
+            "cancellation": [
+                {
+                    "amount": "129.39",
+                    "from": "2025-12-20T23:59:00+01:00"
+                },
+                {
+                    "amount": "631.22",
+                    "from": "2025-12-23T23:59:00+01:00"
+                }
+            ],
+            "taxes": [
+                {
+                    "included": false,
+                    "amount": "8.25",
+                    "currency": "EUR",
+                    "type": "TAX",
+                    "clientAmount": "8.25",
+                    "clientCurrency": "EUR",
+                    "subType": "City Tax"
+                }
+            ],
+            "taxesTotal": 8.25,
+            "hb_raw": {
+                "code": "DBL.OM",
+                "name": "Double Comfort Lemnos with balcony",
+                "rates": [
+                    {
+                        "rateKey": "20251225|20251230|W|1|766|DBL.OM|CG-PACKAGE BB|BB||1~2~0||P@07~~216277~-356124602~N~~~NOR~~C62FE86F5DB0470176514794519005AAUK00010000000005216277",
+                        "rateClass": "NOR",
+                        "rateType": "BOOKABLE",
+                        "net": "631.22",
+                        "allotment": 12,
+                        "rateCommentsId": "1|106372|0",
+                        "paymentType": "AT_WEB",
+                        "packaging": true,
+                        "boardCode": "BB",
+                        "boardName": "BED AND BREAKFAST",
+                        "cancellationPolicies": [
+                            {
+                                "amount": "129.39",
+                                "from": "2025-12-20T23:59:00+01:00"
+                            },
+                            {
+                                "amount": "631.22",
+                                "from": "2025-12-23T23:59:00+01:00"
+                            }
+                        ],
+                        "taxes": {
+                            "taxes": [
+                                {
+                                    "included": false,
+                                    "amount": "8.25",
+                                    "currency": "EUR",
+                                    "type": "TAX",
+                                    "clientAmount": "8.25",
+                                    "clientCurrency": "EUR",
+                                    "subType": "City Tax"
+                                }
+                            ],
+                            "allIncluded": false
+                        },
+                        "rooms": 1,
+                        "adults": 2,
+                        "children": 0
+                    },
+                    {
+                        "rateKey": "20251225|20251230|W|1|766|DBL.OM|CG-BAR BB PVP|BB||1~2~0||N@07~~228321~-1969643927~N~~~NOR~~C62FE86F5DB0470176514794519005AAUK00010000000005243283",
+                        "rateClass": "NOR",
+                        "rateType": "BOOKABLE",
+                        "net": "643.67",
+                        "allotment": 12,
+                        "rateCommentsId": "1|106232|0",
+                        "paymentType": "AT_WEB",
+                        "packaging": false,
+                        "boardCode": "BB",
+                        "boardName": "BED AND BREAKFAST",
+                        "cancellationPolicies": [
+                            {
+                                "amount": "131.95",
+                                "from": "2025-12-20T23:59:00+01:00"
+                            },
+                            {
+                                "amount": "643.67",
+                                "from": "2025-12-23T23:59:00+01:00"
+                            }
+                        ],
+                        "taxes": {
+                            "taxes": [
+                                {
+                                    "included": false,
+                                    "amount": "8.25",
+                                    "currency": "EUR",
+                                    "type": "TAX",
+                                    "clientAmount": "8.25",
+                                    "clientCurrency": "EUR",
+                                    "subType": "City Tax"
+                                }
+                            ],
+                            "allIncluded": false
+                        },
+                        "rooms": 1,
+                        "adults": 2,
+                        "children": 0
+                    },
+                    {
+                        "rateKey": "20251225|20251230|W|1|766|DBL.OM|NRF-BAR BB|BB||1~2~0||N@07~~228321~-1638501924~N~~~NRF~~C62FE86F5DB0470176514794519005AAUK00010000000005243283",
+                        "rateClass": "NRF",
+                        "rateType": "BOOKABLE",
+                        "net": "643.67",
+                        "allotment": 12,
+                        "rateCommentsId": "1|106366|0",
+                        "paymentType": "AT_WEB",
+                        "packaging": false,
+                        "boardCode": "BB",
+                        "boardName": "BED AND BREAKFAST",
+                        "cancellationPolicies": [
+                            {
+                                "amount": "643.67",
+                                "from": "2025-12-06T23:59:00+01:00"
+                            }
+                        ],
+                        "taxes": {
+                            "taxes": [
+                                {
+                                    "included": false,
+                                    "amount": "8.25",
+                                    "currency": "EUR",
+                                    "type": "TAX",
+                                    "clientAmount": "8.25",
+                                    "clientCurrency": "EUR",
+                                    "subType": "City Tax"
+                                }
+                            ],
+                            "allIncluded": false
+                        },
+                        "rooms": 1,
+                        "adults": 2,
+                        "children": 0
+                    },
+                    {
+                        "rateKey": "20251225|20251230|W|1|766|DBL.OM|CG-PACKAGE HB|HB||1~2~0||P@07~~22c3f4~950403686~N~~~NOR~~C62FE86F5DB0470176514794519005AAUK0001000000000522c3f4",
+                        "rateClass": "NOR",
+                        "rateType": "BOOKABLE",
+                        "net": "1012.44",
+                        "allotment": 13,
+                        "rateCommentsId": "1|106373|0",
+                        "paymentType": "AT_WEB",
+                        "packaging": true,
+                        "boardCode": "HB",
+                        "boardName": "HALF BOARD",
+                        "cancellationPolicies": [
+                            {
+                                "amount": "268.02",
+                                "from": "2025-12-20T23:59:00+01:00"
+                            },
+                            {
+                                "amount": "1012.44",
+                                "from": "2025-12-23T23:59:00+01:00"
+                            }
+                        ],
+                        "taxes": {
+                            "taxes": [
+                                {
+                                    "included": false,
+                                    "amount": "8.25",
+                                    "currency": "EUR",
+                                    "type": "TAX",
+                                    "clientAmount": "8.25",
+                                    "clientCurrency": "EUR",
+                                    "subType": "City Tax"
+                                }
+                            ],
+                            "allIncluded": false
+                        },
+                        "rooms": 1,
+                        "adults": 2,
+                        "children": 0
+                    },
+                    {
+                        "rateKey": "20251225|20251230|W|1|766|DBL.OM|CG-BAR HB|HB||1~2~0||N@07~~228505~-351319799~N~~~NOR~~C62FE86F5DB0470176514794519005AAUK0001000000000522b408",
+                        "rateClass": "NOR",
+                        "rateType": "BOOKABLE",
+                        "net": "1032.43",
+                        "allotment": 13,
+                        "rateCommentsId": "1|106368|0",
+                        "paymentType": "AT_WEB",
+                        "packaging": false,
+                        "boardCode": "HB",
+                        "boardName": "HALF BOARD",
+                        "cancellationPolicies": [
+                            {
+                                "amount": "273.31",
+                                "from": "2025-12-20T23:59:00+01:00"
+                            },
+                            {
+                                "amount": "1032.43",
+                                "from": "2025-12-23T23:59:00+01:00"
+                            }
+                        ],
+                        "taxes": {
+                            "taxes": [
+                                {
+                                    "included": false,
+                                    "amount": "8.25",
+                                    "currency": "EUR",
+                                    "type": "TAX",
+                                    "clientAmount": "8.25",
+                                    "clientCurrency": "EUR",
+                                    "subType": "City Tax"
+                                }
+                            ],
+                            "allIncluded": false
+                        },
+                        "rooms": 1,
+                        "adults": 2,
+                        "children": 0
+                    },
+                    {
+                        "rateKey": "20251225|20251230|W|1|766|DBL.OM|NRF-BAR HB|HB||1~2~0||N@07~~228505~-1148680622~N~~~NRF~~C62FE86F5DB0470176514794519005AAUK0001000000000522b408",
+                        "rateClass": "NRF",
+                        "rateType": "BOOKABLE",
+                        "net": "1032.43",
+                        "allotment": 13,
+                        "rateCommentsId": "1|106370|0",
+                        "paymentType": "AT_WEB",
+                        "packaging": false,
+                        "boardCode": "HB",
+                        "boardName": "HALF BOARD",
+                        "cancellationPolicies": [
+                            {
+                                "amount": "1032.43",
+                                "from": "2025-12-06T23:59:00+01:00"
+                            }
+                        ],
+                        "taxes": {
+                            "taxes": [
+                                {
+                                    "included": false,
+                                    "amount": "8.25",
+                                    "currency": "EUR",
+                                    "type": "TAX",
+                                    "clientAmount": "8.25",
+                                    "clientCurrency": "EUR",
+                                    "subType": "City Tax"
+                                }
+                            ],
+                            "allIncluded": false
+                        },
+                        "rooms": 1,
+                        "adults": 2,
+                        "children": 0
+                    }
+                ]
+            }
+        },
+        {
+            "code": "DBL.VP",
+            "name": "COMFORT ITACA POOL VIEW 2 ADULTS",
+            "roomSizeSqm": 33,
+            "bedType": "Double bed 131-150 width",
+            "roomFit": "2 adults",
+            "remainingRooms": 2,
+            "images": [
+                "https://photos.hotelbeds.com/giata/00/000766/000766a_hb_ro_111.jpg",
+                "https://photos.hotelbeds.com/giata/00/000766/000766a_hb_ro_110.jpg",
+                "https://photos.hotelbeds.com/giata/00/000766/000766a_hb_ro_108.jpg",
+                "https://photos.hotelbeds.com/giata/00/000766/000766a_hb_ro_109.jpg"
+            ],
+            "totalPrice": 689.19,
+            "pricePerNight": 137.84,
+            "nights": 5,
+            "currency": "EUR",
+            "rateKey": "20251225|20251230|W|1|766|DBL.VP|CG-PACKAGE BB|BB||1~2~0||P@07~~2132b1~404646442~N~~~NOR~~C62FE86F5DB0470176514794519005AAUK000100000000052132b1",
+            "board": "BED AND BREAKFAST",
+            "refundable": true,
+            "cancellation": [
+                {
+                    "amount": "140.99",
+                    "from": "2025-12-20T23:59:00+01:00"
+                },
+                {
+                    "amount": "689.19",
+                    "from": "2025-12-23T23:59:00+01:00"
+                }
+            ],
+            "taxes": [
+                {
+                    "included": false,
+                    "amount": "8.25",
+                    "currency": "EUR",
+                    "type": "TAX",
+                    "clientAmount": "8.25",
+                    "clientCurrency": "EUR",
+                    "subType": "City Tax"
+                }
+            ],
+            "taxesTotal": 8.25,
+            "hb_raw": {
+                "code": "DBL.VP",
+                "name": "COMFORT ITACA POOL VIEW 2 ADULTS",
+                "rates": [
+                    {
+                        "rateKey": "20251225|20251230|W|1|766|DBL.VP|CG-PACKAGE BB|BB||1~2~0||P@07~~2132b1~404646442~N~~~NOR~~C62FE86F5DB0470176514794519005AAUK000100000000052132b1",
+                        "rateClass": "NOR",
+                        "rateType": "BOOKABLE",
+                        "net": "689.19",
+                        "allotment": 2,
+                        "rateCommentsId": "1|106372|0",
+                        "paymentType": "AT_WEB",
+                        "packaging": true,
+                        "boardCode": "BB",
+                        "boardName": "BED AND BREAKFAST",
+                        "cancellationPolicies": [
+                            {
+                                "amount": "140.99",
+                                "from": "2025-12-20T23:59:00+01:00"
+                            },
+                            {
+                                "amount": "689.19",
+                                "from": "2025-12-23T23:59:00+01:00"
+                            }
+                        ],
+                        "taxes": {
+                            "taxes": [
+                                {
+                                    "included": false,
+                                    "amount": "8.25",
+                                    "currency": "EUR",
+                                    "type": "TAX",
+                                    "clientAmount": "8.25",
+                                    "clientCurrency": "EUR",
+                                    "subType": "City Tax"
+                                }
+                            ],
+                            "allIncluded": false
+                        },
+                        "rooms": 1,
+                        "adults": 2,
+                        "children": 0
+                    },
+                    {
+                        "rateKey": "20251225|20251230|W|1|766|DBL.VP|CG-BAR BB PVP|BB||1~2~0||N@07~~20036b~-445746705~N~~~NOR~~C62FE86F5DB0470176514794519005AAUK0001000000000524f2be",
+                        "rateClass": "NOR",
+                        "rateType": "BOOKABLE",
+                        "net": "702.79",
+                        "allotment": 2,
+                        "rateCommentsId": "1|106232|0",
+                        "paymentType": "AT_WEB",
+                        "packaging": false,
+                        "boardCode": "BB",
+                        "boardName": "BED AND BREAKFAST",
+                        "cancellationPolicies": [
+                            {
+                                "amount": "143.78",
+                                "from": "2025-12-20T23:59:00+01:00"
+                            },
+                            {
+                                "amount": "702.79",
+                                "from": "2025-12-23T23:59:00+01:00"
+                            }
+                        ],
+                        "taxes": {
+                            "taxes": [
+                                {
+                                    "included": false,
+                                    "amount": "8.25",
+                                    "currency": "EUR",
+                                    "type": "TAX",
+                                    "clientAmount": "8.25",
+                                    "clientCurrency": "EUR",
+                                    "subType": "City Tax"
+                                }
+                            ],
+                            "allIncluded": false
+                        },
+                        "rooms": 1,
+                        "adults": 2,
+                        "children": 0
+                    },
+                    {
+                        "rateKey": "20251225|20251230|W|1|766|DBL.VP|NRF-BAR BB|BB||1~2~0||N@07~~20036b~-369866598~N~~~NRF~~C62FE86F5DB0470176514794519005AAUK0001000000000524f2be",
+                        "rateClass": "NRF",
+                        "rateType": "BOOKABLE",
+                        "net": "702.79",
+                        "allotment": 2,
+                        "rateCommentsId": "1|106366|0",
+                        "paymentType": "AT_WEB",
+                        "packaging": false,
+                        "boardCode": "BB",
+                        "boardName": "BED AND BREAKFAST",
+                        "cancellationPolicies": [
+                            {
+                                "amount": "702.79",
+                                "from": "2025-12-06T23:59:00+01:00"
+                            }
+                        ],
+                        "taxes": {
+                            "taxes": [
+                                {
+                                    "included": false,
+                                    "amount": "8.25",
+                                    "currency": "EUR",
+                                    "type": "TAX",
+                                    "clientAmount": "8.25",
+                                    "clientCurrency": "EUR",
+                                    "subType": "City Tax"
+                                }
+                            ],
+                            "allIncluded": false
+                        },
+                        "rooms": 1,
+                        "adults": 2,
+                        "children": 0
+                    },
+                    {
+                        "rateKey": "20251225|20251230|W|1|766|DBL.VP|CG-PACKAGE HB|HB||1~2~0||P@07~~22742e~-1615651766~N~~~NOR~~C62FE86F5DB0470176514794519005AAUK0001000000000522742e",
+                        "rateClass": "NOR",
+                        "rateType": "BOOKABLE",
+                        "net": "1070.39",
+                        "allotment": 4,
+                        "rateCommentsId": "1|106373|0",
+                        "paymentType": "AT_WEB",
+                        "packaging": true,
+                        "boardCode": "HB",
+                        "boardName": "HALF BOARD",
+                        "cancellationPolicies": [
+                            {
+                                "amount": "279.61",
+                                "from": "2025-12-20T23:59:00+01:00"
+                            },
+                            {
+                                "amount": "1070.39",
+                                "from": "2025-12-23T23:59:00+01:00"
+                            }
+                        ],
+                        "taxes": {
+                            "taxes": [
+                                {
+                                    "included": false,
+                                    "amount": "8.25",
+                                    "currency": "EUR",
+                                    "type": "TAX",
+                                    "clientAmount": "8.25",
+                                    "clientCurrency": "EUR",
+                                    "subType": "City Tax"
+                                }
+                            ],
+                            "allIncluded": false
+                        },
+                        "rooms": 1,
+                        "adults": 2,
+                        "children": 0
+                    },
+                    {
+                        "rateKey": "20251225|20251230|W|1|766|DBL.VP|CG-BAR HB|HB||1~2~0||N@07~~20054f~1238457020~N~~~NOR~~C62FE86F5DB0470176514794519005AAUK00010000000005238443",
+                        "rateClass": "NOR",
+                        "rateType": "BOOKABLE",
+                        "net": "1091.56",
+                        "allotment": 4,
+                        "rateCommentsId": "1|106368|0",
+                        "paymentType": "AT_WEB",
+                        "packaging": false,
+                        "boardCode": "HB",
+                        "boardName": "HALF BOARD",
+                        "cancellationPolicies": [
+                            {
+                                "amount": "285.14",
+                                "from": "2025-12-20T23:59:00+01:00"
+                            },
+                            {
+                                "amount": "1091.56",
+                                "from": "2025-12-23T23:59:00+01:00"
+                            }
+                        ],
+                        "taxes": {
+                            "taxes": [
+                                {
+                                    "included": false,
+                                    "amount": "8.25",
+                                    "currency": "EUR",
+                                    "type": "TAX",
+                                    "clientAmount": "8.25",
+                                    "clientCurrency": "EUR",
+                                    "subType": "City Tax"
+                                }
+                            ],
+                            "allIncluded": false
+                        },
+                        "rooms": 1,
+                        "adults": 2,
+                        "children": 0
+                    },
+                    {
+                        "rateKey": "20251225|20251230|W|1|766|DBL.VP|NRF-BAR HB|HB||1~2~0||N@07~~20054f~118106429~N~~~NRF~~C62FE86F5DB0470176514794519005AAUK00010000000005238443",
+                        "rateClass": "NRF",
+                        "rateType": "BOOKABLE",
+                        "net": "1091.56",
+                        "allotment": 4,
+                        "rateCommentsId": "1|106370|0",
+                        "paymentType": "AT_WEB",
+                        "packaging": false,
+                        "boardCode": "HB",
+                        "boardName": "HALF BOARD",
+                        "cancellationPolicies": [
+                            {
+                                "amount": "1091.56",
+                                "from": "2025-12-06T23:59:00+01:00"
+                            }
+                        ],
+                        "taxes": {
+                            "taxes": [
+                                {
+                                    "included": false,
+                                    "amount": "8.25",
+                                    "currency": "EUR",
+                                    "type": "TAX",
+                                    "clientAmount": "8.25",
+                                    "clientCurrency": "EUR",
+                                    "subType": "City Tax"
+                                }
+                            ],
+                            "allIncluded": false
+                        },
+                        "rooms": 1,
+                        "adults": 2,
+                        "children": 0
+                    }
+                ]
+            }
+        },
+        {
+            "code": "DBL.OM-1",
+            "name": "Double Comfort Zeus - Side Sea View",
+            "roomSizeSqm": 30,
+            "bedType": "Double bed 131-150 width",
+            "roomFit": "2 adults",
+            "remainingRooms": 11,
+            "images": [
+                "https://photos.hotelbeds.com/giata/00/000766/000766a_hb_ro_119.jpg",
+                "https://photos.hotelbeds.com/giata/00/000766/000766a_hb_ro_115.jpg",
+                "https://photos.hotelbeds.com/giata/00/000766/000766a_hb_ro_117.jpg",
+                "https://photos.hotelbeds.com/giata/00/000766/000766a_hb_ro_116.jpg"
+            ],
+            "totalPrice": 744.43,
+            "pricePerNight": 148.89,
+            "nights": 5,
+            "currency": "EUR",
+            "rateKey": "20251225|20251230|W|1|766|DBL.OM-1|CG-PACKAGE BB|BB||1~2~0||P@07~~22b2e8~-697390750~N~~~NOR~~C62FE86F5DB0470176514794519005AAUK0001000000000522b2e8",
+            "board": "BED AND BREAKFAST",
+            "refundable": true,
+            "cancellation": [
+                {
+                    "amount": "152.04",
+                    "from": "2025-12-20T23:59:00+01:00"
+                },
+                {
+                    "amount": "744.43",
+                    "from": "2025-12-23T23:59:00+01:00"
+                }
+            ],
+            "taxes": [
+                {
+                    "included": false,
+                    "amount": "8.25",
+                    "currency": "EUR",
+                    "type": "TAX",
+                    "clientAmount": "8.25",
+                    "clientCurrency": "EUR",
+                    "subType": "City Tax"
+                }
+            ],
+            "taxesTotal": 8.25,
+            "hb_raw": {
+                "code": "DBL.OM-1",
+                "name": "Double Comfort Zeus - Side Sea View",
+                "rates": [
+                    {
+                        "rateKey": "20251225|20251230|W|1|766|DBL.OM-1|CG-PACKAGE BB|BB||1~2~0||P@07~~22b2e8~-697390750~N~~~NOR~~C62FE86F5DB0470176514794519005AAUK0001000000000522b2e8",
+                        "rateClass": "NOR",
+                        "rateType": "BOOKABLE",
+                        "net": "744.43",
+                        "allotment": 11,
+                        "rateCommentsId": "1|106372|0",
+                        "paymentType": "AT_WEB",
+                        "packaging": true,
+                        "boardCode": "BB",
+                        "boardName": "BED AND BREAKFAST",
+                        "cancellationPolicies": [
+                            {
+                                "amount": "152.04",
+                                "from": "2025-12-20T23:59:00+01:00"
+                            },
+                            {
+                                "amount": "744.43",
+                                "from": "2025-12-23T23:59:00+01:00"
+                            }
+                        ],
+                        "taxes": {
+                            "taxes": [
+                                {
+                                    "included": false,
+                                    "amount": "8.25",
+                                    "currency": "EUR",
+                                    "type": "TAX",
+                                    "clientAmount": "8.25",
+                                    "clientCurrency": "EUR",
+                                    "subType": "City Tax"
+                                }
+                            ],
+                            "allIncluded": false
+                        },
+                        "rooms": 1,
+                        "adults": 2,
+                        "children": 0
+                    },
+                    {
+                        "rateKey": "20251225|20251230|W|1|766|DBL.OM-1|CG-BAR BB PVP|BB||1~2~0||N@07~~20a3b1~1153095203~N~~~NOR~~C62FE86F5DB0470176514794519005AAUK0001000000000520b2f7",
+                        "rateClass": "NOR",
+                        "rateType": "BOOKABLE",
+                        "net": "759.11",
+                        "allotment": 11,
+                        "rateCommentsId": "1|106232|0",
+                        "paymentType": "AT_WEB",
+                        "packaging": false,
+                        "boardCode": "BB",
+                        "boardName": "BED AND BREAKFAST",
+                        "cancellationPolicies": [
+                            {
+                                "amount": "155.03",
+                                "from": "2025-12-20T23:59:00+01:00"
+                            },
+                            {
+                                "amount": "759.11",
+                                "from": "2025-12-23T23:59:00+01:00"
+                            }
+                        ],
+                        "taxes": {
+                            "taxes": [
+                                {
+                                    "included": false,
+                                    "amount": "8.25",
+                                    "currency": "EUR",
+                                    "type": "TAX",
+                                    "clientAmount": "8.25",
+                                    "clientCurrency": "EUR",
+                                    "subType": "City Tax"
+                                }
+                            ],
+                            "allIncluded": false
+                        },
+                        "rooms": 1,
+                        "adults": 2,
+                        "children": 0
+                    },
+                    {
+                        "rateKey": "20251225|20251230|W|1|766|DBL.OM-1|NRF-BAR BB|BB||1~2~0||N@07~~20a3b1~-2101086498~N~~~NRF~~C62FE86F5DB0470176514794519005AAUK0001000000000520b2f7",
+                        "rateClass": "NRF",
+                        "rateType": "BOOKABLE",
+                        "net": "759.11",
+                        "allotment": 11,
+                        "rateCommentsId": "1|106366|0",
+                        "paymentType": "AT_WEB",
+                        "packaging": false,
+                        "boardCode": "BB",
+                        "boardName": "BED AND BREAKFAST",
+                        "cancellationPolicies": [
+                            {
+                                "amount": "759.11",
+                                "from": "2025-12-06T23:59:00+01:00"
+                            }
+                        ],
+                        "taxes": {
+                            "taxes": [
+                                {
+                                    "included": false,
+                                    "amount": "8.25",
+                                    "currency": "EUR",
+                                    "type": "TAX",
+                                    "clientAmount": "8.25",
+                                    "clientCurrency": "EUR",
+                                    "subType": "City Tax"
+                                }
+                            ],
+                            "allIncluded": false
+                        },
+                        "rooms": 1,
+                        "adults": 2,
+                        "children": 0
+                    },
+                    {
+                        "rateKey": "20251225|20251230|W|1|766|DBL.OM-1|CG-PACKAGE HB|HB||1~2~0||P@07~~240465~-1154465950~N~~~NOR~~C62FE86F5DB0470176514794519005AAUK00010000000005240465",
+                        "rateClass": "NOR",
+                        "rateType": "BOOKABLE",
+                        "net": "1125.64",
+                        "allotment": 27,
+                        "rateCommentsId": "1|106373|0",
+                        "paymentType": "AT_WEB",
+                        "packaging": true,
+                        "boardCode": "HB",
+                        "boardName": "HALF BOARD",
+                        "cancellationPolicies": [
+                            {
+                                "amount": "290.66",
+                                "from": "2025-12-20T23:59:00+01:00"
+                            },
+                            {
+                                "amount": "1125.64",
+                                "from": "2025-12-23T23:59:00+01:00"
+                            }
+                        ],
+                        "taxes": {
+                            "taxes": [
+                                {
+                                    "included": false,
+                                    "amount": "8.25",
+                                    "currency": "EUR",
+                                    "type": "TAX",
+                                    "clientAmount": "8.25",
+                                    "clientCurrency": "EUR",
+                                    "subType": "City Tax"
+                                }
+                            ],
+                            "allIncluded": false
+                        },
+                        "rooms": 1,
+                        "adults": 2,
+                        "children": 0
+                    },
+                    {
+                        "rateKey": "20251225|20251230|W|1|766|DBL.OM-1|CG-BAR HB|HB||1~2~0||N@07~~20a595~248314222~N~~~NOR~~C62FE86F5DB0470176514794519005AAUK0001000000000525347b",
+                        "rateClass": "NOR",
+                        "rateType": "BOOKABLE",
+                        "net": "1147.83",
+                        "allotment": 27,
+                        "rateCommentsId": "1|106368|0",
+                        "paymentType": "AT_WEB",
+                        "packaging": false,
+                        "boardCode": "HB",
+                        "boardName": "HALF BOARD",
+                        "cancellationPolicies": [
+                            {
+                                "amount": "296.39",
+                                "from": "2025-12-20T23:59:00+01:00"
+                            },
+                            {
+                                "amount": "1147.83",
+                                "from": "2025-12-23T23:59:00+01:00"
+                            }
+                        ],
+                        "taxes": {
+                            "taxes": [
+                                {
+                                    "included": false,
+                                    "amount": "8.25",
+                                    "currency": "EUR",
+                                    "type": "TAX",
+                                    "clientAmount": "8.25",
+                                    "clientCurrency": "EUR",
+                                    "subType": "City Tax"
+                                }
+                            ],
+                            "allIncluded": false
+                        },
+                        "rooms": 1,
+                        "adults": 2,
+                        "children": 0
+                    },
+                    {
+                        "rateKey": "20251225|20251230|W|1|766|DBL.OM-1|NRF-BAR HB|HB||1~2~0||N@07~~20a595~632559103~N~~~NRF~~C62FE86F5DB0470176514794519005AAUK0001000000000525347b",
+                        "rateClass": "NRF",
+                        "rateType": "BOOKABLE",
+                        "net": "1147.83",
+                        "allotment": 27,
+                        "rateCommentsId": "1|106370|0",
+                        "paymentType": "AT_WEB",
+                        "packaging": false,
+                        "boardCode": "HB",
+                        "boardName": "HALF BOARD",
+                        "cancellationPolicies": [
+                            {
+                                "amount": "1147.83",
+                                "from": "2025-12-06T23:59:00+01:00"
+                            }
+                        ],
+                        "taxes": {
+                            "taxes": [
+                                {
+                                    "included": false,
+                                    "amount": "8.25",
+                                    "currency": "EUR",
+                                    "type": "TAX",
+                                    "clientAmount": "8.25",
+                                    "clientCurrency": "EUR",
+                                    "subType": "City Tax"
+                                }
+                            ],
+                            "allIncluded": false
+                        },
+                        "rooms": 1,
+                        "adults": 2,
+                        "children": 0
+                    }
+                ]
+            }
+        },
+        {
+            "code": "DBT.DX",
+            "name": "Double Deluxe Artemisa - Sea View",
+            "roomSizeSqm": 33,
+            "bedType": "Double bed 131-150 width",
+            "roomFit": "2 adults",
+            "remainingRooms": 8,
+            "images": [
+                "https://photos.hotelbeds.com/giata/00/000766/000766a_hb_ro_299.jpg",
+                "https://photos.hotelbeds.com/giata/00/000766/000766a_hb_ro_298.jpg",
+                "https://photos.hotelbeds.com/giata/00/000766/000766a_hb_ro_140.jpg",
+                "https://photos.hotelbeds.com/giata/00/000766/000766a_hb_ro_136.jpg",
+                "https://photos.hotelbeds.com/giata/00/000766/000766a_hb_ro_130.jpg"
+            ],
+            "totalPrice": 799.45,
+            "pricePerNight": 159.89,
+            "nights": 5,
+            "currency": "EUR",
+            "rateKey": "20251225|20251230|W|1|766|DBT.DX|CG-PACKAGE BB|BB||1~2~0||P@07~~22d31f~386244600~N~~~NOR~~C62FE86F5DB0470176514794519005AAUK0001000000000522d31f",
+            "board": "BED AND BREAKFAST",
+            "refundable": true,
+            "cancellation": [
+                {
+                    "amount": "163.04",
+                    "from": "2025-12-20T23:59:00+01:00"
+                },
+                {
+                    "amount": "799.45",
+                    "from": "2025-12-23T23:59:00+01:00"
+                }
+            ],
+            "taxes": [
+                {
+                    "included": false,
+                    "amount": "8.25",
+                    "currency": "EUR",
+                    "type": "TAX",
+                    "clientAmount": "8.25",
+                    "clientCurrency": "EUR",
+                    "subType": "City Tax"
+                }
+            ],
+            "taxesTotal": 8.25,
+            "hb_raw": {
+                "code": "DBT.DX",
+                "name": "Double Deluxe Artemisa - Sea View",
+                "rates": [
+                    {
+                        "rateKey": "20251225|20251230|W|1|766|DBT.DX|CG-PACKAGE BB|BB||1~2~0||P@07~~22d31f~386244600~N~~~NOR~~C62FE86F5DB0470176514794519005AAUK0001000000000522d31f",
+                        "rateClass": "NOR",
+                        "rateType": "BOOKABLE",
+                        "net": "799.45",
+                        "allotment": 8,
+                        "rateCommentsId": "1|106372|0",
+                        "paymentType": "AT_WEB",
+                        "packaging": true,
+                        "boardCode": "BB",
+                        "boardName": "BED AND BREAKFAST",
+                        "cancellationPolicies": [
+                            {
+                                "amount": "163.04",
+                                "from": "2025-12-20T23:59:00+01:00"
+                            },
+                            {
+                                "amount": "799.45",
+                                "from": "2025-12-23T23:59:00+01:00"
+                            }
+                        ],
+                        "taxes": {
+                            "taxes": [
+                                {
+                                    "included": false,
+                                    "amount": "8.25",
+                                    "currency": "EUR",
+                                    "type": "TAX",
+                                    "clientAmount": "8.25",
+                                    "clientCurrency": "EUR",
+                                    "subType": "City Tax"
+                                }
+                            ],
+                            "allIncluded": false
+                        },
+                        "rooms": 1,
+                        "adults": 2,
+                        "children": 0
+                    },
+                    {
+                        "rateKey": "20251225|20251230|W|1|766|DBT.DX|CG-BAR BB PVP|BB||1~2~0||N@07~~2003f7~1350776183~N~~~NOR~~C62FE86F5DB0470176514794519005AAUK0001000000000521632f",
+                        "rateClass": "NOR",
+                        "rateType": "BOOKABLE",
+                        "net": "815.22",
+                        "allotment": 8,
+                        "rateCommentsId": "1|106232|0",
+                        "paymentType": "AT_WEB",
+                        "packaging": false,
+                        "boardCode": "BB",
+                        "boardName": "BED AND BREAKFAST",
+                        "cancellationPolicies": [
+                            {
+                                "amount": "166.26",
+                                "from": "2025-12-20T23:59:00+01:00"
+                            },
+                            {
+                                "amount": "815.22",
+                                "from": "2025-12-23T23:59:00+01:00"
+                            }
+                        ],
+                        "taxes": {
+                            "taxes": [
+                                {
+                                    "included": false,
+                                    "amount": "8.25",
+                                    "currency": "EUR",
+                                    "type": "TAX",
+                                    "clientAmount": "8.25",
+                                    "clientCurrency": "EUR",
+                                    "subType": "City Tax"
+                                }
+                            ],
+                            "allIncluded": false
+                        },
+                        "rooms": 1,
+                        "adults": 2,
+                        "children": 0
+                    },
+                    {
+                        "rateKey": "20251225|20251230|W|1|766|DBT.DX|NRF-BAR BB|BB||1~2~0||N@07~~2003f7~1157043462~N~~~NRF~~C62FE86F5DB0470176514794519005AAUK0001000000000521632f",
+                        "rateClass": "NRF",
+                        "rateType": "BOOKABLE",
+                        "net": "815.22",
+                        "allotment": 8,
+                        "rateCommentsId": "1|106366|0",
+                        "paymentType": "AT_WEB",
+                        "packaging": false,
+                        "boardCode": "BB",
+                        "boardName": "BED AND BREAKFAST",
+                        "cancellationPolicies": [
+                            {
+                                "amount": "815.22",
+                                "from": "2025-12-06T23:59:00+01:00"
+                            }
+                        ],
+                        "taxes": {
+                            "taxes": [
+                                {
+                                    "included": false,
+                                    "amount": "8.25",
+                                    "currency": "EUR",
+                                    "type": "TAX",
+                                    "clientAmount": "8.25",
+                                    "clientCurrency": "EUR",
+                                    "subType": "City Tax"
+                                }
+                            ],
+                            "allIncluded": false
+                        },
+                        "rooms": 1,
+                        "adults": 2,
+                        "children": 0
+                    },
+                    {
+                        "rateKey": "20251225|20251230|W|1|766|DBT.DX|CG-PACKAGE HB|HB||1~2~0||P@07~~24549c~1776344728~N~~~NOR~~C62FE86F5DB0470176514794519005AAUK0001000000000524549c",
+                        "rateClass": "NOR",
+                        "rateType": "BOOKABLE",
+                        "net": "1180.69",
+                        "allotment": 63,
+                        "rateCommentsId": "1|106373|0",
+                        "paymentType": "AT_WEB",
+                        "packaging": true,
+                        "boardCode": "HB",
+                        "boardName": "HALF BOARD",
+                        "cancellationPolicies": [
+                            {
+                                "amount": "301.67",
+                                "from": "2025-12-20T23:59:00+01:00"
+                            },
+                            {
+                                "amount": "1180.69",
+                                "from": "2025-12-23T23:59:00+01:00"
+                            }
+                        ],
+                        "taxes": {
+                            "taxes": [
+                                {
+                                    "included": false,
+                                    "amount": "8.25",
+                                    "currency": "EUR",
+                                    "type": "TAX",
+                                    "clientAmount": "8.25",
+                                    "clientCurrency": "EUR",
+                                    "subType": "City Tax"
+                                }
+                            ],
+                            "allIncluded": false
+                        },
+                        "rooms": 1,
+                        "adults": 2,
+                        "children": 0
+                    },
+                    {
+                        "rateKey": "20251225|20251230|W|1|766|DBT.DX|CG-BAR HB|HB||1~2~0||N@07~~2005db~1917857337~N~~~NOR~~C62FE86F5DB0470176514794519005AAUK000100000000052624b3",
+                        "rateClass": "NOR",
+                        "rateType": "BOOKABLE",
+                        "net": "1203.98",
+                        "allotment": 63,
+                        "rateCommentsId": "1|106368|0",
+                        "paymentType": "AT_WEB",
+                        "packaging": false,
+                        "boardCode": "HB",
+                        "boardName": "HALF BOARD",
+                        "cancellationPolicies": [
+                            {
+                                "amount": "307.62",
+                                "from": "2025-12-20T23:59:00+01:00"
+                            },
+                            {
+                                "amount": "1203.98",
+                                "from": "2025-12-23T23:59:00+01:00"
+                            }
+                        ],
+                        "taxes": {
+                            "taxes": [
+                                {
+                                    "included": false,
+                                    "amount": "8.25",
+                                    "currency": "EUR",
+                                    "type": "TAX",
+                                    "clientAmount": "8.25",
+                                    "clientCurrency": "EUR",
+                                    "subType": "City Tax"
+                                }
+                            ],
+                            "allIncluded": false
+                        },
+                        "rooms": 1,
+                        "adults": 2,
+                        "children": 0
+                    },
+                    {
+                        "rateKey": "20251225|20251230|W|1|766|DBT.DX|NRF-BAR HB|HB||1~2~0||N@07~~2005db~-1884135778~N~~~NRF~~C62FE86F5DB0470176514794519005AAUK000100000000052624b3",
+                        "rateClass": "NRF",
+                        "rateType": "BOOKABLE",
+                        "net": "1203.98",
+                        "allotment": 63,
+                        "rateCommentsId": "1|106370|0",
+                        "paymentType": "AT_WEB",
+                        "packaging": false,
+                        "boardCode": "HB",
+                        "boardName": "HALF BOARD",
+                        "cancellationPolicies": [
+                            {
+                                "amount": "1203.98",
+                                "from": "2025-12-06T23:59:00+01:00"
+                            }
+                        ],
+                        "taxes": {
+                            "taxes": [
+                                {
+                                    "included": false,
+                                    "amount": "8.25",
+                                    "currency": "EUR",
+                                    "type": "TAX",
+                                    "clientAmount": "8.25",
+                                    "clientCurrency": "EUR",
+                                    "subType": "City Tax"
+                                }
+                            ],
+                            "allIncluded": false
+                        },
+                        "rooms": 1,
+                        "adults": 2,
+                        "children": 0
+                    }
+                ]
+            }
+        }
+    ]
+}
