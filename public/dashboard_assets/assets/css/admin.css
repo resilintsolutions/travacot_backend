@@ -1,0 +1,403 @@
+/* ========= Generic admin inventory styles ========= */
+
+.page-body-wrapper{
+    padding-top: 0px !important;
+}
+
+li.nav-item.active a.nav-link.active{
+    color: #fff !important;
+}
+
+.sidebar .nav{
+    margin-bottom: 0px !important;
+}
+
+li.nav-item.nav-profile.dropdown #profileDropdown img {
+    width: 50px;
+    margin-left: 25px;
+}
+
+/* Main card */
+.inv-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 24px 28px;
+    box-shadow: 0 10px 40px rgba(15, 23, 42, 0.05);
+}
+
+/* Titles */
+.inv-header-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #6b7280;
+    margin-bottom: 4px;
+}
+.inv-page-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 20px;
+}
+
+/* Search */
+.inv-search-input {
+    border-radius: 999px;
+    padding-left: 40px;
+    border: 1px solid #e5e7eb;
+    font-size: 14px;
+}
+.inv-search-input:focus {
+    box-shadow: 0 0 0 1px #4f46e5;
+    border-color: #4f46e5;
+}
+.inv-search-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9ca3af;
+    font-size: 14px;
+}
+
+/* Tables */
+.inv-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 8px;
+}
+.inv-table th {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #9ca3af;
+    padding: 10px 14px;
+    border-bottom: 1px solid #e5e7eb;
+    background: transparent;
+}
+.inv-table tbody tr {
+    background: #f9fafb;
+    border-radius: 14px;
+}
+.inv-table tbody tr td {
+    font-size: 13px;
+    padding: 12px 14px;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+}
+.inv-table tbody tr td:first-child {
+    border-top-left-radius: 14px;
+    border-bottom-left-radius: 14px;
+}
+.inv-table tbody tr td:last-child {
+    border-top-right-radius: 14px;
+    border-bottom-right-radius: 14px;
+}
+.inv-table-wrapper {
+    margin-top: 18px;
+    overflow-x: auto;
+}
+
+/* Hotel text */
+.inv-hotel-name {
+    font-weight: 600;
+    color: #111827;
+    font-size: 13px;
+}
+.inv-hotel-location {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+/* Pills */
+.pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 500;
+}
+.pill-success {
+    background: #ecfdf5;
+    color: #15803d;
+    border: 1px solid #bbf7d0;
+}
+.pill-warning {
+    background: #fffbeb;
+    color: #92400e;
+    border: 1px solid #fed7aa;
+}
+.pill-danger {
+    background: #fef2f2;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+}
+.pill-muted {
+    background: #f3f4f6;
+    color: #4b5563;
+    border: 1px solid #e5e7eb;
+}
+
+/* Status pills */
+.status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 500;
+}
+.status-pill--active {
+    background: #ecfdf5;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+}
+.status-pill--inactive {
+    background: #fef2f2;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+}
+.status-pill--suspended {
+    background: #fef9c3;
+    color: #854d0e;
+    border: 1px solid #fde68a;
+}
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: currentColor;
+}
+
+/* ========= Pinned hotels top row (search + Pin/Unpin pills) ========= */
+
+.inv-top-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.inv-search-block {
+    max-width: 460px;
+    flex: 1;
+}
+
+.inv-search-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.inv-pin-pills {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+@media (min-width: 992px) {
+    .inv-pin-pills {
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: stretch;
+        flex: 1;
+    }
+}
+
+.inv-pin-pill {
+    flex: 1;
+    border-radius: 9999px;
+    padding: 18px 28px;
+    color: #f9fafb;
+    font-size: 12px;
+}
+.inv-pin-pill-title {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+.inv-pin-pill--pin {
+    background: #047857;
+    width: fit-content;
+    padding: 8px 20px;
+    border-radius: 10px;
+}
+.inv-pin-pill p{
+    color: #111827;
+}
+.inv-pin-pill--unpin {
+    background: #b91c1c; /* red */
+    width: fit-content;
+    padding: 8px 20px;
+    border-radius: 10px;
+}
+.inv-pin-pill ul {
+    margin-bottom: 0;
+    padding-left: 18px;
+    list-style: disc;
+    line-height: 1.5;
+    color: #111827;
+}
+
+/* Pin/Unpin buttons in table */
+.inv-btn-pill {
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-size: 12px;
+    font-weight: 500;
+    border: none;
+}
+.inv-btn-pin {
+    background: #065f46;
+    color: #ffffff;
+}
+.inv-btn-unpin {
+    background: #b91c1c;
+    color: #ffffff;
+}
+
+
+/* ========= Content Health ========= */
+
+/* Top summary card */
+.health-summary-card {
+    background: #f9fafb;
+    border-radius: 18px;
+    padding: 14px 18px;
+    margin-bottom: 20px;
+}
+.health-summary-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 2px;
+}
+.health-summary-subtitle {
+    font-size: 12px;
+    color: #6b7280;
+    margin-bottom: 10px;
+}
+.health-summary-table {
+    width: 100%;
+    font-size: 12px;
+}
+.health-summary-table td {
+    padding: 3px 0;
+}
+.health-summary-label {
+    color: #4b5563;
+}
+.health-summary-value {
+    text-align: right;
+    font-weight: 600;
+    color: #111827;
+}
+.health-summary-trend {
+    text-align: right;
+    font-size: 11px;
+    color: #b91c1c; /* red text like 'Higher than yesterday' */
+}
+
+/* Content Issues header + tabs row */
+.health-header-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: center;
+}
+.health-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    font-size: 12px;
+    margin-top: 8px;
+}
+.health-tab {
+    cursor: pointer;
+    color: #6b7280;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+}
+.health-tab--active {
+    color: #111827;
+    border-color: #4f46e5;
+    font-weight: 600;
+}
+
+/* Search on right side */
+.health-search-wrapper {
+    position: relative;
+    min-width: 260px;
+}
+.health-search-input {
+    border-radius: 999px;
+    padding-left: 32px;
+    border: 1px solid #e5e7eb;
+    font-size: 13px;
+}
+.health-search-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #9ca3af;
+}
+
+/* Status badges in table */
+.health-badge-ok {
+    color: #15803d;
+    font-size: 12px;
+}
+.health-badge-bad {
+    color: #b91c1c;
+    font-size: 12px;
+}
+.health-badge-warn {
+    color: #92400e;
+    font-size: 12px;
+}
+
+/* Score dot (same as API health dot) */
+.health-score-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    background: #9ca3af;
+    display: inline-block;
+}
+
+.hotel-gallery .card { border: 0; }
+.hotel-gallery img { border-radius: 8px; }
+
+
+.mr-card {
+  border-radius: 12px;
+  border: 1px solid #e6e9ef;
+  background: #fff;
+}
+.mr-top-card {
+  border-radius: 12px;
+  border: 1px solid #e6e9ef;
+  background: #f7f9fc;
+  padding: 18px;
+}
+.mr-badge {
+  background: #f5f7fa;
+  color: #111;
+  display:inline-block;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-weight:600;
+}
+.mr-list-item { padding: 18px 24px; border-bottom:1px solid #f1f3f6; }
+.mr-list-item .fw-semibold { font-weight:700; }
+.mr-section { margin-bottom: 22px; }
+.modal .form-text { color:#6b7280; }
+.btn-outline-primary { border-color:#e6e9ef; color:#222; }
+.card-body .small.text-muted { color:#6b7280; }

@@ -1,108 +1,61 @@
-# **Travacot – Travelbook Web UI ✈️📘**
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-**Travacot** is a modern, fully responsive **UI-only** travel booking and travel-logging interface built with
-**Next.js**, **React**, **TypeScript**, **Tailwind CSS**, **Shadcn UI**, and **Framer Motion**.
+<p align="center">
+<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+</p>
 
-This project focuses purely on **frontend UI/UX**, showcasing clean design, smooth animations, and component-driven architecture for pages such as travel listings, booking flows, authentication screens, messaging, reservations, and more.
+## About Laravel
 
----
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-## 🚀 **Tech Stack**
+- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/docs/container).
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- [Robust background job processing](https://laravel.com/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-- **Next.js 14+** – App Router, layouts, and modern rendering
-- **React 18** – Component-driven interface
-- **TypeScript** – Strict typing for scalable UI development
-- **Tailwind CSS** – Utility-first styling system
-- **Shadcn UI** – Accessible and themeable UI components
-- **Framer Motion** – Smooth animations and transitions
-- **Vercel** – Deployment and hosting (optional)
+Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
----
+## Learning Laravel
 
-## ✨ **UI Features**
+Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-Since this is a **UI-only project**, all interactions are frontend-based with mock data or placeholder states.
+You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
-- 🔐 **Auth Pages** – Login & Register
-- 🔎 **Search & Discovery** – Find places, filter options
-- 🏡 **Place Details** – Images, descriptions, amenities
-- ❤️ **Favorites** – Save preferred destinations
-- 💬 **Messages UI** – Messaging or chat-style layout
-- 🛏️ **Room & Booking Flow** – Guest selection, dates, forms
-- 💳 **Payment Details UI** – Frontend-only payment screen
-- 📅 **Reservations** – Past & upcoming bookings layout
-- 👤 **Account/Profile** – Manage user details
-- 📱 Fully responsive UI for mobile, tablet, and desktop
+If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
----
+## Laravel Sponsors
 
-## 🛠️ **Installation & Setup**
+We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
 
-```bash
-# Install dependencies
-npm install
-# or
-yarn install
+### Premium Partners
 
-# Start development server
-npm run dev
-```
+- **[Vehikl](https://vehikl.com)**
+- **[Tighten Co.](https://tighten.co)**
+- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+- **[64 Robots](https://64robots.com)**
+- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
+- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
+- **[Redberry](https://redberry.international/laravel-development)**
+- **[Active Logic](https://activelogic.com)**
 
-Open the project at:
-`http://localhost:3000`
+## Contributing
 
----
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## 🎨 **UI & Styling**
+## Code of Conduct
 
-Travacot uses a combination of:
+In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-- **Tailwind CSS** – Rapid styling for layout & spacing
-- **Shadcn UI** – Accessible, customizable component system
-- **Framer Motion** – Animations for page transitions, modals, and micro-interactions
+## Security Vulnerabilities
 
-This stack ensures a **clean, modern, consistent, and scalable UI**.
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
----
+## License
 
-## 📅 **Development Phases**
-
-Below is the planned workflow used for building the UI:
-
-### **Phase 1 – Project Setup & Auth Pages (5–7 days)**
-
-- Initialize Next.js + TypeScript
-- Configure routing, layout, and globals (TailwindCSS)
-- Build Login & Register UI with validation
-- Ensure responsiveness and smooth page structure
-
-### **Phase 2 – Main Pages & Navigation (7–9 days)**
-
-- Landing page UI
-- Search / Find Place listing page
-- Place Details page
-- Favorites page
-- Responsive navigation & routing
-
-### **Phase 3 – Messaging & Booking UI (7–9 days)**
-
-- Messages page layout
-- Booking flow UI (registered & guest)
-- Form steps, room selection, and date inputs
-- Mock interactions / placeholder state
-
-### **Phase 4 – Profile & Reservations (5–7 days)**
-
-- Profile / Account pages
-- Reservations UI
-- Style consistency + small improvements
-
-### **Phase 5 – Testing, Polishing & Final Delivery (3–5 days)**
-
-- Final UI/UX review
-- Fix bugs, refine animations
-- Responsiveness check
-- Deployment setup (e.g., Vercel preview)
-- Final handover
-
-⏱️ _Timeline may shift based on feedback and design revisions, but updates will be communicated clearly._
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
