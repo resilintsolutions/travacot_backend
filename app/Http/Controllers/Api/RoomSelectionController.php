@@ -10,11 +10,12 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 use Carbon\Carbon;
 use App\Services\PricingService;
+use App\Services\PromoEngine\PromoEngineService;
 
 
 class RoomSelectionController extends Controller
 {
-    public function roomTypes($hotelId, Request $request, HotelbedsService $hb)
+    public function roomTypes($hotelId, Request $request, HotelbedsService $hb, PromoEngineService $promoEngine)
     {
         $data = $request->validate([
             'checkIn'  => 'required|date',
@@ -227,6 +228,21 @@ class RoomSelectionController extends Controller
                 city: data_get($contentHotel, 'destination.code'),
             );
 
+            $promoDecision = $promoEngine->decide(
+                $pricing['margin_percent'] ?? 0,
+                null,
+                ['source' => 'room_types', 'hotel_code' => $hotelId]
+            );
+
+            $promoPrice = null;
+            if ($promoDecision['status'] === 'applied') {
+                $promoPrice = $promoEngine->applyToPrice(
+                    (float) $lowestRate['net'],
+                    $pricing['margin_percent'] ?? 0,
+                    $promoDecision['discount_percent'] ?? 0
+                );
+            }
+
             // ---------- RATES ----------
             $hbRates = array_map(function ($r) use ($countryCode, $cityCode, $hbHotel, $hb) {
 
@@ -315,6 +331,23 @@ class RoomSelectionController extends Controller
                 }
                 // --------------------------------------------------
 
+                $promoDecision = $pricing
+                    ? $promoEngine->decide(
+                        $pricing['margin_percent'] ?? 0,
+                        null,
+                        ['source' => 'room_rate', 'hotel_code' => $hotelId]
+                    )
+                    : ['status' => 'none'];
+
+                $promoPrice = null;
+                if ($promoDecision['status'] === 'applied' && $net) {
+                    $promoPrice = $promoEngine->applyToPrice(
+                        $net,
+                        $pricing['margin_percent'] ?? 0,
+                        $promoDecision['discount_percent'] ?? 0
+                    );
+                }
+
                 return array_merge($r, [
                     // ✅ taxes
                     'taxes'      => $rateTaxesOut,
@@ -329,6 +362,13 @@ class RoomSelectionController extends Controller
 
                     // existing
                     'pricing' => $pricing,
+                    'promo' => [
+                        'status' => $promoDecision['status'] ?? 'none',
+                        'mode' => $promoDecision['mode'] ?? null,
+                        'discount_percent' => $promoDecision['discount_percent'] ?? null,
+                        'final_margin' => $promoDecision['final_margin'] ?? null,
+                        'promo_price' => $promoPrice['final_price'] ?? null,
+                    ],
                 ]);
             }, $rates);
 
@@ -383,8 +423,9 @@ class RoomSelectionController extends Controller
                 'marginPercent'  => $pricing['margin_percent'],
                 'marginSource'   => $pricing['margin_source'],
                 'scopeUsed'      => $pricing['scope_used'],
-                'totalPrice'     => $pricing['final_price'],
-                'pricePerNight'  => round($pricing['final_price'] / $nights, 2),
+                'totalPrice'     => $promoPrice['final_price'] ?? $pricing['final_price'],
+                'baseTotalPrice' => $pricing['final_price'],
+                'pricePerNight'  => round(($promoPrice['final_price'] ?? $pricing['final_price']) / $nights, 2),
                 'nights'         => $nights,
                 'currency'       => $hbHotel['currency'],
                 'roomSizeSqm'    => $roomSizeSqm,
@@ -396,6 +437,13 @@ class RoomSelectionController extends Controller
                 'rateType'       => $lowestRate['rateType'],
                 'board'          => $lowestRate['boardName'],
                 'refundable'     => $isRefundable,
+                'promo' => [
+                    'status' => $promoDecision['status'] ?? 'none',
+                    'mode' => $promoDecision['mode'] ?? null,
+                    'discount_percent' => $promoDecision['discount_percent'] ?? null,
+                    'final_margin' => $promoDecision['final_margin'] ?? null,
+                    'promo_price' => $promoPrice['final_price'] ?? null,
+                ],
                 'hb_raw'         => ['rates' => $hbRates],
             ];
         }
