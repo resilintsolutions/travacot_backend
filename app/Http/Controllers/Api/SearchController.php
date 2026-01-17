@@ -12,11 +12,20 @@ use Carbon\Carbon;
 use Illuminate\Support\Arr;
 use App\Services\HotelExclusionService;
 use App\Models\HealthEventLog;
+use App\Services\PromoEngine\PromoEngineService;
+use App\Services\PromoEngine\PromoEventTracker;
 
 
 class SearchController extends Controller
 {
-    public function search(Request $request, HotelbedsService $hb, MediaService $mediaService, HotelExclusionService $exclusionService)
+    public function search(
+        Request $request,
+        HotelbedsService $hb,
+        MediaService $mediaService,
+        HotelExclusionService $exclusionService,
+        PromoEngineService $promoEngine,
+        PromoEventTracker $promoTracker
+    )
     {
         $data = $request->validate([
             'destination'           => 'required_without:hotelIds|string',
@@ -281,7 +290,35 @@ class SearchController extends Controller
                 continue;
             }
 
-            // 8) RESPONSE (UNCHANGED STRUCTURE)
+            // 8) Promo engine (Ongoing Deals)
+            $promoDecision = $promoEngine->decide(
+                $lowestPricing['margin_percent'] ?? 0,
+                $hotelModel?->id,
+                ['source' => 'search', 'hotel_code' => $vendorCode]
+            );
+
+            $promoPrice = null;
+            if ($promoDecision['status'] === 'applied') {
+                $promoPrice = $promoEngine->applyToPrice(
+                    $lowestNet,
+                    $lowestPricing['margin_percent'] ?? 0,
+                    $promoDecision['discount_percent'] ?? 0
+                );
+
+                if ($hotelModel?->id) {
+                    $impressed = $request->session()->get('promo_impressions', []);
+                    if (!in_array($hotelModel->id, $impressed, true)) {
+                        $promoTracker->recordImpression($request, $hotelModel->id, [
+                            'source' => 'search',
+                            'mode' => $promoDecision['mode'] ?? null,
+                        ]);
+                        $impressed[] = $hotelModel->id;
+                        $request->session()->put('promo_impressions', $impressed);
+                    }
+                }
+            }
+
+            // 9) RESPONSE
             $results[] = [
                 'code'            => $vendorCode,
                 'name'            => data_get($h, 'name.content') ?? data_get($h, 'name'),
@@ -328,6 +365,13 @@ class SearchController extends Controller
                 'images'          => $imageUrls,
                 'recommended'     => false,
                 'totalReviews'    => 1,
+                'promo' => [
+                    'status' => $promoDecision['status'] ?? 'none',
+                    'mode' => $promoDecision['mode'] ?? null,
+                    'discount_percent' => $promoDecision['discount_percent'] ?? null,
+                    'final_margin' => $promoDecision['final_margin'] ?? null,
+                    'promo_price' => $promoPrice['final_price'] ?? null,
+                ],
             ];
         }
 
