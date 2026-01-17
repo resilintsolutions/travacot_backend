@@ -11,6 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
+        if (Schema::hasTable('media')) {
+            return;
+        }
+
         Schema::create('media', function (Blueprint $table) {
             $table->id();
             // polymorphic relation so same media table can be used for hotels, rooms, brochures, etc.
