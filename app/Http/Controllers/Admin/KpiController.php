@@ -134,10 +134,17 @@ class KpiController extends Controller
         $avgNights = 0;
 
         if (Schema::hasColumn('reservations', 'check_in') && Schema::hasColumn('reservations', 'check_out')) {
+            $driver = DB::getDriverName();
+            $diffExpr = match ($driver) {
+                'sqlite' => 'AVG(julianday(check_out) - julianday(check_in))',
+                'pgsql' => "AVG(DATE_PART('day', check_out - check_in))",
+                default => 'AVG(DATEDIFF(check_out, check_in))',
+            };
+
             $avgNights = (clone $reservationBase)
                 ->whereNotNull('check_in')
                 ->whereNotNull('check_out')
-                ->selectRaw('AVG(DATEDIFF(check_out, check_in)) as avg_nights')
+                ->selectRaw($diffExpr . ' as avg_nights')
                 ->value('avg_nights') ?? 0;
         }
 

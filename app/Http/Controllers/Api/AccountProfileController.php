@@ -19,8 +19,21 @@ class AccountProfileController extends Controller
 
         $data = $request->validate([
             'name'  => 'sometimes|string|max:255',
+            'first_name' => 'sometimes|string|max:255',
+            'last_name' => 'sometimes|string|max:255',
             'email' => "sometimes|email|unique:users,email,{$user->id}",
+            'country' => 'sometimes|string|max:255',
+            'city' => 'sometimes|string|max:255',
+            'address' => 'sometimes|string|max:255',
+            'phone_number' => 'sometimes|string|max:50',
+            'country_code' => 'sometimes|string|max:10',
         ]);
+
+        if (!empty($data['first_name']) || !empty($data['last_name'])) {
+            $first = $data['first_name'] ?? $user->first_name;
+            $last = $data['last_name'] ?? $user->last_name;
+            $data['name'] = trim($first . ' ' . $last);
+        }
 
         $user->update($data);
 
