@@ -14,6 +14,7 @@ use Stripe\Event as StripeEvent;
 use Stripe\Webhook as StripeWebhook;
 use Stripe\Refund;
 use App\Models\HealthEventLog;
+use App\Models\IdentityVerification;
 
 class StripeWebhookController extends Controller
 {
@@ -111,6 +112,41 @@ class StripeWebhookController extends Controller
                         'payment_status' => 'failed',
                         'status'         => 'payment_failed',
                     ]);
+                }
+
+                break;
+
+            /**
+             * ---------------------------------------------
+             * STRIPE IDENTITY VERIFICATION
+             * ---------------------------------------------
+             */
+            case 'identity.verification_session.verified':
+            case 'identity.verification_session.completed':
+                $session = $event->data->object;
+
+                $verification = IdentityVerification::where('provider_reference', $session->id)->first();
+
+                if ($verification) {
+                    $verifiedOutputs = $session->verified_outputs ?? [];
+                    $firstName = data_get($verifiedOutputs, 'first_name');
+                    $lastName = data_get($verifiedOutputs, 'last_name');
+
+                    $verification->update([
+                        'status' => $session->status ?? 'verified',
+                        'verified_first_name' => $firstName,
+                        'verified_last_name' => $lastName,
+                        'verified_at' => now(),
+                    ]);
+
+                    $user = $verification->user;
+                    if ($user) {
+                        $user->first_name = $firstName ?: $user->first_name;
+                        $user->last_name = $lastName ?: $user->last_name;
+                        $user->name = trim(($user->first_name ?? '') . ' ' . ($user->last_name ?? '')) ?: $user->name;
+                        $user->identity_verified_at = now();
+                        $user->save();
+                    }
                 }
 
                 break;

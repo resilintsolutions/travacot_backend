@@ -23,6 +23,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\HotelbedsController;
 use App\Http\Controllers\Api\StripeWebhookController;
 use App\Http\Controllers\Api\TailoredHotelController;
+use App\Http\Controllers\Api\PromoEngineSettingsController;
+use App\Http\Controllers\Api\PromoEngineMetricsController;
+use App\Http\Controllers\Api\PromoEngineTrackingController;
+use App\Http\Controllers\Api\PromoEngineOffersController;
 
 use App\Http\Controllers\Api\HotelbedsDebugController;
 
@@ -151,4 +155,16 @@ Route::middleware(['auth:sanctum', 'role:admin'])->group(function () {
     Route::delete('inventory/pin/{pinned}', [InventoryController::class, 'unpin']);
     Route::get('inventory/pinned', [InventoryController::class, 'pinnedList']);
     Route::get('inventory/content-health', [InventoryController::class, 'contentHealth']);
+
+    Route::prefix('promo-engine')->group(function () {
+        Route::get('settings', [PromoEngineSettingsController::class, 'show']);
+        Route::put('settings', [PromoEngineSettingsController::class, 'update']);
+        Route::get('metrics', [PromoEngineMetricsController::class, 'index']);
+    });
+});
+
+Route::prefix('promo-engine')->group(function () {
+    Route::get('ongoing-deals', [PromoEngineOffersController::class, 'index']);
+    Route::post('impression', [PromoEngineTrackingController::class, 'impression']);
+    Route::post('click', [PromoEngineTrackingController::class, 'click']);
 });

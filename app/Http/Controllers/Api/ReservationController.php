@@ -10,6 +10,8 @@ use App\Services\HotelbedsService;
 use App\Services\PricingService;
 use App\Services\StripeService;
 use App\Services\MediaService;
+use App\Services\PromoEngine\PromoEngineService;
+use App\Services\PromoEngine\PromoAttributionService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
@@ -350,7 +352,9 @@ class ReservationController extends Controller
         Request $req,
         HotelbedsService $hb,
         StripeService $stripe,
-        MediaService $mediaService
+        MediaService $mediaService,
+        PromoEngineService $promoEngine,
+        PromoAttributionService $promoAttribution
     ) {
         $data = $req->validate([
             'hotel_id'              => 'required|integer',
@@ -378,6 +382,7 @@ class ReservationController extends Controller
             'customer_email'        => 'nullable|email',
             'check_in'              => 'nullable|date',
             'check_out'             => 'nullable|date|after:check_in',
+            'apply_promo'           => 'nullable|boolean',
         ]);
 
         /* ----------------------------------------------------
@@ -422,6 +427,9 @@ class ReservationController extends Controller
         $currency = $data['currency'];
         $checkIn  = $data['check_in']  ?? null;
         $checkOut = $data['check_out'] ?? null;
+
+        $applyPromo = $req->boolean('apply_promo');
+        $promoSummary = null;
 
         foreach ($data['rooms'] as $index => $roomReq) {
             $roomId = $index + 1;
@@ -488,18 +496,45 @@ class ReservationController extends Controller
                 context: []
             );
 
+            $promoDecision = null;
+            $promoPrice = null;
+
+            if ($applyPromo) {
+                $promoDecision = $promoEngine->decide(
+                    $pricing['margin_percent'] ?? 0,
+                    $hotel->id,
+                    ['source' => 'checkout', 'hotel_id' => $hotel->id]
+                );
+
+                if (($promoDecision['status'] ?? null) === 'applied') {
+                    $promoPrice = $promoEngine->applyToPrice(
+                        $pricing['vendor_net'],
+                        $pricing['margin_percent'] ?? 0,
+                        $promoDecision['discount_percent'] ?? 0
+                    );
+
+                    if (!$promoSummary) {
+                        $promoSummary = $promoDecision;
+                    }
+                }
+            }
+
+            $finalSelling = $promoPrice['final_price'] ?? $pricing['final_price'];
+            $finalMargin = $promoPrice['final_margin'] ?? $pricing['margin_percent'];
+
             $totalVendorNet += $pricing['vendor_net'];
-            $totalSelling   += $pricing['final_price'];
-            $totalMarkup    += ($pricing['final_price'] - $pricing['vendor_net']);
+            $totalSelling   += $finalSelling;
+            $totalMarkup    += ($finalSelling - $pricing['vendor_net']);
 
             $pricingBreakdown[] = [
                 'rateKey'        => $hbRoom['rateKey'],
                 'vendor_net'     => $pricing['vendor_net'],
                 'selling_price'  => $pricing['selling_price'],
-                'final_price'    => $pricing['final_price'],
-                'margin_percent' => $pricing['margin_percent'],
+                'final_price'    => $finalSelling,
+                'margin_percent' => $finalMargin,
                 'scope_used'     => $pricing['scope_used'],
                 'msp_scope'      => $pricing['msp_scope'],
+                'promo' => $promoDecision,
             ];
 
             $roomsHbPayload[] = $hbRoom;
@@ -520,12 +555,14 @@ class ReservationController extends Controller
 
         $reservation = Reservation::create([
             'hotel_id'        => $hotel->id,
+            'user_id'         => $req->user()?->id,
             'guest_info'      => [
                 'holder'             => $data['holder'],
                 'rooms'              => $roomsHbPayload,
                 'pricing_breakdown'  => $pricingBreakdown,
                 'countryCode'        => $data['countryCode'],
                 'cityCode'           => $data['cityCode'],
+                'promo'              => $promoSummary,
             ],
             'total_price'     => $sellAmount,
             'markup_amount'   => $markupAmount,
@@ -537,6 +574,9 @@ class ReservationController extends Controller
             'customer_name'   => $data['holder']['name'] . ' ' . $data['holder']['surname'],
             'customer_email'  => $data['customer_email'] ?? null,
             'booking_channel' => $data['channel'] ?? 'Website',
+            'promo_mode'      => $promoSummary['mode'] ?? null,
+            'promo_discount_percent' => $promoSummary['discount_percent'] ?? null,
+            'promo_final_margin' => $promoSummary['final_margin'] ?? null,
         ]);
 
         /* ----------------------------------------------------
@@ -551,6 +591,16 @@ class ReservationController extends Controller
         $reservation->stripe_payment_intent_id = $intent->id;
         $reservation->payment_status = $intent->status ?? 'pending_payment';
         $reservation->save();
+
+        if ($promoSummary) {
+            $promoAttribution->attribute(
+                $reservation,
+                $hotel->id,
+                $req->session()->getId(),
+                $req->header('X-Request-Id'),
+                ['source' => 'checkout']
+            );
+        }
 
         return response()->json([
             'success'       => true,
@@ -1041,6 +1091,13 @@ class ReservationController extends Controller
      */
     public function destroy(Reservation $reservation, HotelbedsService $hb)
     {
+        if ($reservation->is_resold || $reservation->resold_to_user_id) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Resold bookings cannot be cancelled.',
+            ], 422);
+        }
+
         // Default response structure
         $result = [
             'success' => true,

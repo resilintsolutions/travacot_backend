@@ -74,9 +74,13 @@ class ApiStatusController extends Controller
             }
 
             // Most booked FROM: guest country from JSON (guest_info.country)
+            $jsonCountryExpr = DB::getDriverName() === 'sqlite'
+                ? "JSON_EXTRACT(guest_info, '$.country')"
+                : "JSON_UNQUOTE(JSON_EXTRACT(guest_info, '$.country'))";
+
             $mostBookedFrom = Reservation::whereIn('hotel_id', $hotelIds)
                 ->select(
-                    DB::raw("JSON_UNQUOTE(JSON_EXTRACT(guest_info, '$.country')) as country"),
+                    DB::raw($jsonCountryExpr . ' as country'),
                     DB::raw('COUNT(*) as total')
                 )
                 ->whereNotNull(DB::raw("JSON_EXTRACT(guest_info, '$.country')"))

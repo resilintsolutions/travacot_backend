@@ -10,6 +10,7 @@ class Reservation extends Model
         'confirmation_number',
         'hotel_id',
         'room_id',
+        'user_id',
         'guest_info',
         'total_price',
         'markup_amount',
@@ -27,6 +28,13 @@ class Reservation extends Model
         'supplier_reference',
         'stripe_payment_intent_id',
         'payment_status',
+        'is_resold',
+        'resold_at',
+        'resold_to_user_id',
+        'promo_mode',
+        'promo_discount_percent',
+        'promo_final_margin',
+        'promo_attributed',
     ];
 
     protected $casts = [
@@ -36,6 +44,11 @@ class Reservation extends Model
         'check_out'     => 'date',
         'markup_amount' => 'float',
         'total_price'   => 'float',
+        'is_resold'     => 'boolean',
+        'resold_at'     => 'datetime',
+        'promo_discount_percent' => 'float',
+        'promo_final_margin' => 'float',
+        'promo_attributed' => 'boolean',
     ];
 
 
@@ -52,6 +65,16 @@ class Reservation extends Model
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function resoldTo()
+    {
+        return $this->belongsTo(User::class, 'resold_to_user_id');
+    }
+
+    public function resale()
+    {
+        return $this->hasOne(\App\Models\MarketplaceResale::class);
     }
 
     /**
@@ -73,6 +96,10 @@ class Reservation extends Model
 
     public function isCancellable(): bool
     {
+        if ($this->is_resold || $this->resold_to_user_id) {
+            return false;
+        }
+
         $raw = $this->raw_response ?? [];
 
         $policies = collect(data_get($raw, 'hotel.rooms', []))
