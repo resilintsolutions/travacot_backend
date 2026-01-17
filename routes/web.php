@@ -23,6 +23,8 @@ use App\Http\Controllers\Admin\TodayPerformanceController;
 use App\Http\Controllers\Admin\AdminReservationController;
 use App\Http\Controllers\Admin\HotelExclusionController;
 use App\Http\Controllers\Admin\SystemHealthController;
+use App\Http\Controllers\Admin\PromoEngineController;
+use App\Http\Controllers\Admin\SupportCaseController;
 
 Route::get('/', function () {
     // return view('welcome');
@@ -164,6 +166,18 @@ Route::middleware(['auth', 'role:admin'])->prefix('admin')->name('admin.')->grou
         ->name('api-health.realtime');
 
     });
+
+    Route::prefix('promo-engine')->name('promo-engine.')->group(function () {
+        Route::get('/', [PromoEngineController::class, 'index'])->name('index');
+        Route::put('/', [PromoEngineController::class, 'update'])->name('update');
+    });
+
+    Route::prefix('support')->name('support.')->group(function () {
+        Route::get('/', [SupportCaseController::class, 'index'])->name('index');
+        Route::get('/{supportCase}', [SupportCaseController::class, 'show'])->name('show');
+        Route::post('/{supportCase}/messages', [SupportCaseController::class, 'sendMessage'])->name('messages.send');
+        Route::post('/{supportCase}/decision', [SupportCaseController::class, 'updateDecision'])->name('decision');
+    });
 });
 
 Route::get('test-media', function (\App\Services\MediaService $ms) {
@@ -173,3 +187,51 @@ Route::get('test-media', function (\App\Services\MediaService $ms) {
 
 
 require __DIR__ . '/auth.php';
+
+Route::prefix('marketplace')->name('marketplace.')->group(function () {
+    Route::get('/search', [\App\Http\Controllers\Marketplace\MarketplaceSearchController::class, 'show'])
+        ->name('search.show');
+    Route::post('/search', [\App\Http\Controllers\Marketplace\MarketplaceSearchController::class, 'search'])
+        ->name('search.perform');
+    Route::get('/hotels/{hotelCode}', [\App\Http\Controllers\Marketplace\MarketplaceHotelController::class, 'show'])
+        ->name('hotels.show');
+
+    Route::get('/resales', [\App\Http\Controllers\Marketplace\MarketplaceResaleController::class, 'index'])
+        ->name('resales.index');
+    Route::get('/resales/{resale}', [\App\Http\Controllers\Marketplace\MarketplaceResaleController::class, 'show'])
+        ->name('resales.show');
+
+    Route::middleware('auth')->group(function () {
+        Route::post('/checkout/start', [\App\Http\Controllers\Marketplace\MarketplaceCheckoutController::class, 'start'])
+            ->name('checkout.start');
+        Route::get('/checkout', [\App\Http\Controllers\Marketplace\MarketplaceCheckoutController::class, 'show'])
+            ->name('checkout.show');
+        Route::post('/checkout/recheck', [\App\Http\Controllers\Marketplace\MarketplaceCheckoutController::class, 'recheck'])
+            ->name('checkout.recheck');
+        Route::post('/checkout/accept', [\App\Http\Controllers\Marketplace\MarketplaceCheckoutController::class, 'acceptRate'])
+            ->name('checkout.accept');
+        Route::post('/checkout/create', [\App\Http\Controllers\Marketplace\MarketplaceCheckoutController::class, 'createReservation'])
+            ->name('checkout.create');
+        Route::get('/checkout/processing/{reservation}', [\App\Http\Controllers\Marketplace\MarketplaceCheckoutController::class, 'processing'])
+            ->name('checkout.processing');
+        Route::get('/confirmation/{reservation}', [\App\Http\Controllers\Marketplace\MarketplaceCheckoutController::class, 'confirmation'])
+            ->name('checkout.confirmation');
+        Route::get('/reservations/{reservation}/status', [\App\Http\Controllers\Marketplace\MarketplaceCheckoutController::class, 'status'])
+            ->name('reservations.status');
+
+        Route::post('/resales/{resale}/buy', [\App\Http\Controllers\Marketplace\MarketplaceResaleController::class, 'buy'])
+            ->name('resales.buy');
+
+        Route::get('/verification', [\App\Http\Controllers\Marketplace\MarketplaceVerificationController::class, 'show'])
+            ->name('verification.show');
+        Route::post('/verification/fee-intent', [\App\Http\Controllers\Marketplace\MarketplaceVerificationController::class, 'feeIntent'])
+            ->name('verification.fee');
+        Route::post('/verification/start', [\App\Http\Controllers\Marketplace\MarketplaceVerificationController::class, 'start'])
+            ->name('verification.start');
+    });
+
+    Route::middleware(['auth', 'identity_verified'])->group(function () {
+        Route::post('/resales/{reservation}/list', [\App\Http\Controllers\Marketplace\MarketplaceResaleController::class, 'create'])
+            ->name('resales.create');
+    });
+});

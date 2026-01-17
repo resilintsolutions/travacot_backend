@@ -63,6 +63,12 @@
                 PPM (Price & Perf. Mgmt.)
             </a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link small-item {{ request()->routeIs('admin.promo-engine.*') ? 'active' : '' }}"
+                href="{{ route('admin.promo-engine.index') }}">
+                Promo Engine
+            </a>
+        </li>
         {{-- <li class="nav-item">
             <a class="nav-link small-item" href="#">Rate Parity</a>
         </li> --}}
@@ -108,6 +114,15 @@
         </li>
         <li class="nav-item">
             <a class="nav-link small-item" href="#">Guest Insights</a>
+        </li>
+
+        <!-- Support -->
+        <li class="menu-section">Support</li>
+        <li class="nav-item">
+            <a class="nav-link small-item {{ request()->routeIs('admin.support.*') ? 'active' : '' }}"
+                href="{{ route('admin.support.index') }}">
+                Customer Support
+            </a>
         </li>
 
         <!-- Settings -->
