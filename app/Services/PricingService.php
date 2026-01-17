@@ -23,7 +23,11 @@ class PricingService
     protected static function resolveMarginScope(?string $country, ?string $city): MarginRulesSetting
     {
         return MarginRulesSetting::forLocation($country, $city)
-            ?? MarginRulesSetting::where('scope', 'global')->first();
+            ?? MarginRulesSetting::where('scope', 'global')->first()
+            ?? new MarginRulesSetting([
+                'scope' => 'global',
+                'default_margin_percent' => 0,
+            ]);
     }
 
     /* ---------------------------------------------
